@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum - Temukan Peta Kehidupanmu</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2C3E50',   // Biru Tua
+                        secondary: '#F4F4F9', // Putih Gading
+                        accent: '#1ABC9C',    // Hijau Teal
+                        gold: '#FFD700',      // Emas
+                        bronze: '#CD7F32',    // Perunggu
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0, transform: 'translateY(10px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Sembunyikan scrollbar untuk tampilan lebih bersih di mode kios */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-secondary font-sans flex items-center justify-center min-h-screen p-4">
+
+    <main class="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 transform transition-all duration-500">
+
+        <div id="step-0" class="text-center animate-fade-in">
+            <img src="https://placehold.co/150x150/2C3E50/FFFFFF?text=M" alt="Momentum Logo" class="mx-auto mb-6 rounded-full">
+            <h1 class="text-2xl font-bold text-primary">Selamat Datang di Posko Peta Kehidupan!</h1>
+            <p class="text-gray-600 mt-2 mb-6">Kami akan membantumu melihat potensimu dalam beberapa pertanyaan singkat. Jawabanmu 100% anonim dan rahasia.</p>
+            <button id="start-btn" class="w-full bg-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all shadow-lg">
+                Tentu, Saya Siap!
+            </button>
+        </div>
+
+        <div id="step-1" class="hidden animate-fade-in">
+            <p class="font-bold text-primary text-lg text-center mb-6">Saat ini, apa yang paling menyita pikiranmu?</p>
+            <div class="space-y-3">
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Pendidikan">Tugas Akhir & Kelulusan</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="KarierAwal">Mencari Pekerjaan Pertama</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="KarierLanjutan">Karier yang Stagnan & Butuh Arah Baru</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Wirausaha">Ingin Memulai Usaha/Proyek Sendiri</button>
+            </div>
+        </div>
+        
+        <div id="step-2" class="hidden animate-fade-in">
+             <p class="font-bold text-primary text-lg text-center mb-6">Apa penghalang terbesarmu untuk maju saat ini?</p>
+             <div class="space-y-3">
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Bingung">Terlalu banyak pilihan, jadi bingung mulai dari mana.</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Distraksi">Mudah terdistraksi oleh hal lain yang tidak penting.</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Motivasi">Kurang energi dan motivasi untuk konsisten.</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="TakutGagal">Takut mengambil risiko atau takut akan kegagalan.</button>
+            </div>
+        </div>
+
+        <div id="step-3" class="hidden animate-fade-in">
+            <p class="font-bold text-primary text-lg text-center mb-6">Saat menghadapi sebuah proyek besar, caramu adalah...</p>
+            <div class="space-y-3">
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Perencana">Membuat rencana super detail dari A sampai Z dulu.</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Eksekutor">Langsung mencoba, belajar sambil jalan, dan melihat hasil.</button>
+                <button class="quiz-option w-full p-4 rounded-lg shadow hover:shadow-xl transition-all text-left" data-tag="Inovator">Mencari banyak ide dan inspirasi liar terlebih dahulu.</button>
+            </div>
+        </div>
+
+        <div id="step-4" class="hidden animate-fade-in text-center">
+             <svg class="animate-spin h-12 w-12 text-accent mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p class="font-bold text-primary text-lg mt-4">Memetakan Potensimu...</p>
+        </div>
+
+        <div id="step-5" class="hidden animate-fade-in text-center">
+            <h2 class="text-2xl font-bold text-primary mb-2">Peta Kehidupan Awalmu</h2>
+            
+            <div class="bg-secondary p-4 rounded-lg text-left mb-4">
+                <h3 class="font-bold text-accent mb-1">Arketipe Anda:</h3>
+                <p id="result-arketipe" class="text-primary font-bold text-lg"></p>
+            </div>
+
+            <div class="bg-secondary p-4 rounded-lg text-left mb-4">
+                 <h3 class="font-bold text-accent mb-1">Gambaran Diri:</h3>
+                 <p id="result-deskripsi" class="text-gray-700 text-sm"></p>
+            </div>
+
+            <div class="bg-secondary p-4 rounded-lg text-left mb-6">
+                <h3 class="font-bold text-accent mb-1">Saran Momentum Pertama Anda:</h3>
+                <p id="result-saran" class="text-gray-700 text-sm"></p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="font-bold text-primary">Lencana Pemula Anda:</h3>
+                <img src="https://placehold.co/100x100/CD7F32/FFFFFF?text=S" alt="Lencana Pemula" class="mx-auto mt-2 rounded-full shadow-md">
+                <p class="font-bold text-bronze mt-1">Lencana Perunggu: Sang Sadar Diri</p>
+                <p class="text-xs text-gray-500">Diberikan karena Anda berani melihat ke dalam diri.</p>
+            </div>
+            
+            <p class="text-sm font-bold text-primary mb-2">Simpan hasil ini & dapatkan roadmap lengkap di aplikasi Momentum!</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://momentum.app/beta-signup" alt="QR Code Daftar Beta" class="mx-auto">
+            <p class="text-xs text-gray-500 mt-2">Scan QR untuk mendaftar ke daftar tunggu Beta.</p>
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = [
+                document.getElementById('step-0'),
+                document.getElementById('step-1'),
+                document.getElementById('step-2'),
+                document.getElementById('step-3'),
+                document.getElementById('step-4'),
+                document.getElementById('step-5'),
+            ];
+            
+            const startBtn = document.getElementById('start-btn');
+            const quizOptions = document.querySelectorAll('.quiz-option');
+
+            let currentStep = 0;
+            let userAnswers = [];
+
+            function showStep(stepIndex) {
+                steps.forEach((step, index) => {
+                    if (index === stepIndex) {
+                        step.classList.remove('hidden');
+                    } else {
+                        step.classList.add('hidden');
+                    }
+                });
+            }
+
+            startBtn.addEventListener('click', () => {
+                currentStep = 1;
+                showStep(currentStep);
+            });
+
+            quizOptions.forEach(button => {
+                button.addEventListener('click', () => {
+                    userAnswers.push(button.dataset.tag);
+                    currentStep++;
+                    showStep(currentStep);
+
+                    if (currentStep === 4) { // Analyzing step
+                        setTimeout(() => {
+                            generateResults();
+                            currentStep++;
+                            showStep(currentStep);
+                        }, 2000); // Tampilkan hasil setelah 2 detik
+                    }
+                });
+            });
+            
+            function generateResults() {
+                const [tahap, masalah, aksi] = userAnswers;
+                let arketipe = 'Penjelajah Potensi';
+                let deskripsi = '';
+                let saran = '';
+
+                // Logika penentuan Arketipe dan Deskripsi
+                if (aksi === 'Perencana') {
+                    if (masalah === 'Bingung') {
+                        arketipe = 'Arsitek yang Ragu';
+                        deskripsi = 'Anda punya bakat luar biasa untuk merencanakan, tapi saat ini terlalu banyak pilihan membuat Anda sulit meletakkan batu pertama.';
+                        saran = 'Gunakan metode "Brain Dump". Tulis semua pilihan dan kekhawatiran Anda di kertas tanpa dihakimi. Kejelasan akan muncul setelah kekacauan tertuang.';
+                    } else {
+                        arketipe = 'Sang Perencana Strategis';
+                        deskripsi = 'Kekuatan Anda adalah kemampuan melihat ke depan dan menyusun rencana yang matang. Anda tidak suka kejutan dan lebih memilih jalur yang terukur.';
+                        saran = 'Rencana Anda sudah bagus. Tantangan Anda adalah memulai eksekusinya. Coba "Aturan 2 Menit": lakukan satu tugas dari rencanamu selama 2 menit saja.';
+                    }
+                } else if (aksi === 'Eksekutor') {
+                    if (masalah === 'Distraksi') {
+                        arketipe = 'Pembalap yang Terganggu';
+                        deskripsi = 'Anda punya energi besar untuk bertindak, tapi energi itu sering bocor ke berbagai distraksi. Anda sulit mempertahankan fokus pada satu lintasan.';
+                        saran = 'Coba "Teknik Time Blocking". Alokasikan 1 blok waktu (misal 60 menit) setiap hari hanya untuk 1 tugas penting, dan matikan semua notifikasi lain.';
+                    } else {
+                        arketipe = 'Mesin Penggerak';
+                        deskripsi = 'Anda adalah tipe orang yang "get things done". Anda tidak banyak berpikir dan langsung terjun ke dalam aksi untuk melihat hasil nyata.';
+                        saran = 'Energi Anda sangat besar. Pastikan energi itu terarah pada hal yang tepat. Coba luangkan 5 menit setiap pagi untuk menetapkan "Satu Tujuan Utama Hari Ini".';
+                    }
+                } else { // Inovator
+                     arketipe = 'Sang Inovator Kreatif';
+                     deskripsi = 'Anda melihat dunia dengan cara yang berbeda dan penuh dengan ide-ide baru. Anda tidak suka dibatasi oleh aturan dan lebih suka menciptakan jalan sendiri.';
+                     saran = 'Ide Anda sangat berharga. Tantangannya adalah mewujudkannya. Pilih SATU ide paling menarik minggu ini dan tulis 3 langkah pertama untuk membuatnya nyata.';
+                }
+
+                // Menampilkan hasil
+                document.getElementById('result-arketipe').textContent = arketipe;
+                document.getElementById('result-deskripsi').innerHTML = deskripsi;
+                document.getElementById('result-saran').innerHTML = saran;
+            }
+
+            showStep(0); // Tampilkan layar selamat datang pertama kali
+        });
+    </script>
+</body>
+</html>
