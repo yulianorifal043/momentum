@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum - Temukan Arah, Rancang Masa Depan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#2C3E50',
+                        secondary: '#F4F4F9',
+                        accent: '#1ABC9C',
+                        gold: '#FFD700',
+                        silver: '#C0C0C0',
+                        bronze: '#CD7F32',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-secondary">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-primary">Momentum</h1>
+            <a href="#cta" class="bg-accent text-white font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-all">Daftar Beta</a>
+        </div>
+    </header>
+    <section id="hero" class="py-20 md:py-28 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-primary leading-tight">Ubah Kebingungan Jadi Arah.<br>Ubah Arah Jadi Prestasi.</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Momentum adalah Co-Pilot cerdas yang membantumu menemukan jalan, merancang rencana, dan membuktikan potensimu pada dunia.</p>
+            <a href="#demo" class="mt-8 inline-block bg-accent text-white font-bold text-lg py-4 px-10 rounded-full hover:bg-opacity-90 transition-all shadow-lg">Coba Simulasi Perjalananmu</a>
+        </div>
+    </section>
+    
+    <section id="demo" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-primary text-center mb-4">Temukan Jalanmu dalam 60 Detik</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Ikuti simulasi singkat ini untuk melihat bagaimana Momentum memetakan masa depanmu.</p>
+
+            <div class="max-w-2xl mx-auto bg-secondary p-8 rounded-2xl shadow-lg min-h-[500px]">
+                
+                <div id="step-1-kepribadian">
+                    <p class="font-bold text-primary text-lg mb-1">Tes Kepribadian Singkat</p>
+                    <p class="text-sm text-gray-500 mb-4">Pilih satu gambar yang paling mewakili caramu bekerja. Ikuti intuisimu!</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button class="personality-choice p-0 rounded-lg shadow hover:shadow-xl transition-all overflow-hidden" data-type="Perencana">
+                            <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxvcmdhbml6ZWQlMjBkZXNrfGVufDB8fHx8MTY4MTMyOTYyMA&ixlib=rb-4.0.3&q=80&w=400" alt="Meja kerja yang terorganisir">
+                            <p class="p-3 font-bold text-primary bg-white">Saya suka semua hal terstruktur dan terencana.</p>
+                        </button>
+                        <button class="personality-choice p-0 rounded-lg shadow hover:shadow-xl transition-all overflow-hidden" data-type="Eksekutor">
+                             <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fHJ1bm5lcnxlbnwwfHx8fDE2ODEzMjk4Mjg&ixlib=rb-4.0.3&q=80&w=400" alt="Pelari yang sedang beraksi">
+                            <p class="p-3 font-bold text-primary bg-white">Saya suka langsung bertindak dan melihat hasil.</p>
+                        </button>
+                        <button class="personality-choice p-0 rounded-lg shadow hover:shadow-xl transition-all overflow-hidden" data-type="Inovator">
+                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxjcmVhdGl2ZSUyMHRlYW18ZW58MHx8fHwxNjgxMzI5NzU0&ixlib=rb-4.0.3&q=80&w=400" alt="Tim yang sedang brainstorming">
+                            <p class="p-3 font-bold text-primary bg-white">Saya suka mencari ide-ide baru dan berpikir *out-of-the-box*.</p>
+                        </button>
+                         <button class="personality-choice p-0 rounded-lg shadow hover:shadow-xl transition-all overflow-hidden" data-type="Analis">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGRhdGElMjBhbmFseXNpc3xlbnwwfHx8fDE2ODEzMjk4NzY&ixlib=rb-4.0.3&q=80&w=400" alt="Grafik dan data analisis">
+                            <p class="p-3 font-bold text-primary bg-white">Saya suka menganalisis data sebelum mengambil keputusan.</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="step-2-tujuan" class="hidden">
+                     <p class="font-bold text-primary text-lg mb-4">Pilihan yang hebat! Sekarang, mari kita tetapkan tujuanmu.</p>
+                     <div class="space-y-6">
+                        <div>
+                            <label for="kampus" class="block text-sm font-medium text-gray-700">Pilih Kampus Unggulan Impianmu:</label>
+                            <select id="kampus" name="kampus" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-accent focus:border-accent sm:text-sm rounded-md">
+                                <option>Universitas Gadjah Mada (Mitra)</option>
+                                <option>Institut Teknologi Bandung (Mitra)</option>
+                                <option>Universitas Indonesia (Mitra)</option>
+                                <option>Lainnya</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="pekerjaan" class="block text-sm font-medium text-gray-700">Pilih Pekerjaan Impianmu di Masa Depan:</label>
+                            <select id="pekerjaan" name="pekerjaan" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-accent focus:border-accent sm:text-sm rounded-md">
+                                <option>Bekerja di BUMN</option>
+                                <option>Startup Teknologi</option>
+                                <option>Konsultan Manajemen</option>
+                                <option>Wirausaha</option>
+                            </select>
+                        </div>
+                        <button id="buat-roadmap-btn" class="w-full bg-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Buatkan Saya Roadmap!</button>
+                     </div>
+                </div>
+
+                <div id="step-3-hasil" class="hidden">
+                    <h2 class="text-2xl font-bold text-primary mb-2 text-center">Analisis & Roadmap Perjalananmu</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-inner mb-6">
+                        <h3 class="font-bold text-accent mb-2">Analisis Kepribadian Awal</h3>
+                        <p id="analisis-kepribadian" class="text-gray-700 text-sm"></p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-inner">
+                        <h3 class="font-bold text-accent mb-4">Roadmap Awal Menuju <span id="tujuan-akhir" class="text-primary"></span></h3>
+                        <div id="roadmap-container" class="space-y-3 h-48 overflow-y-auto pr-2">
+                           </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <h3 class="font-bold text-primary">Anda dianugerahi Lencana Pemula!</h3>
+                        <div class="mt-2 inline-block">
+                             <img src="https://placehold.co/100x100/CD7F32/FFFFFF?text=P" alt="Lencana Pemula" class="mx-auto">
+                             <p class="font-bold text-bronze mt-1">Lencana Perunggu: Sang Perintis</p>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 max-w-md mx-auto">Anda telah mengambil langkah pertama yang paling penting: memiliki kejelasan. Ini adalah awal dari perjalanan besar Anda.</p>
+                        <a href="#cta" id="daftar-beta-final-btn" class="mt-6 inline-block bg-gold text-primary font-bold text-lg py-3 px-8 rounded-full hover:bg-opacity-90 transition-all shadow-lg">
+                            Mulai Perjalanan Nyata, Daftar Beta Momentum!
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="cta" class="bg-primary text-white py-6 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg font-bold">Siap Mengubah Rencana Menjadi Prestasi?</p>
+            <a href="#" class="mt-4 inline-block bg-accent text-white font-bold text-lg py-3 px-8 rounded-full hover:bg-opacity-90 transition-all">Daftar Tunggu Beta Sekarang</a>
+        </div>
+    </footer>
+    
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</body>
+</html>
