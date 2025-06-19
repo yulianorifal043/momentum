@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnik Art - Abadikan Momen, Wujudkan Kenangan</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menggunakan font yang telah diimpor */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #6d4c41, #a1887f); /* Warna coklat hangat yang elegan */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        /* Kelas untuk animasi saat scroll */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-lora transition-colors">Ethnik Art</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#galeri" class="font-semibold hover:text-indigo-700 transition-colors">Galeri</a>
+                <a href="#proses" class="font-semibold hover:text-indigo-700 transition-colors">Proses</a>
+                <a href="#kontak" class="font-semibold hover:text-indigo-700 transition-colors">Kontak</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="bg-white pt-24">
+        <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+            <div class="grid lg:grid-cols-12 lg:gap-16 lg:items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight scroll-reveal">
+                        <span class="block">Bekukan Momen,</span>
+                        <span class="block gradient-text mt-2">Abadikan Cerita Anda.</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-stone-600 max-w-lg mx-auto lg:mx-0 scroll-reveal" style="transition-delay: 200ms;">
+                        Kami mengubah kenangan paling berharga dalam hidup Anda—pernikahan, wisuda, momen keluarga—menjadi sebuah karya seni miniatur 3D yang personal dan abadi.
+                    </p>
+                    <div class="mt-8 flex gap-4 justify-center lg:justify-start scroll-reveal" style="transition-delay: 400ms;">
+                        <a href="#kontak" class="inline-block bg-slate-800 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-slate-700 transition-transform transform hover:scale-105">
+                            Mulai Konsultasi
+                        </a>
+                        <a href="#galeri" class="inline-block bg-white text-slate-800 font-semibold px-8 py-3 rounded-lg ring-1 ring-slate-300 hover:bg-slate-100 transition">
+                            Lihat Galeri Karya
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-5 scroll-reveal" style="transition-delay: 300ms;">
+                    <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/600x700/D2B48C/3D2B1F?text=Miniatur\nPernikahan\nElegan" alt="Contoh Miniatur Pernikahan Ethnik Art" class="object-cover w-full h-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-3xl mx-auto text-center px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-stone-900 font-lora scroll-reveal">Setiap Momen Adalah Pusaka</h2>
+            <p class="mt-4 text-lg text-stone-600 leading-relaxed scroll-reveal" style="transition-delay: 200ms;">
+                Foto menyimpan visual, video menyimpan suara. Tapi sebuah miniatur menyimpan **rasa**. Ia menangkap esensi dari sebuah pelukan, tatapan, dan janji suci dalam bentuk tiga dimensi yang bisa Anda sentuh dan kenang selamanya. Di Ethnik Art, kami percaya bahwa mencegah kenangan memudar adalah bentuk cinta yang paling tulus.
+            </p>
+        </div>
+    </section>
+
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 font-lora scroll-reveal">Galeri Karya Ethnik Art</h2>
+                <p class="mt-4 text-lg text-stone-600 scroll-reveal" style="transition-delay: 200ms;">Beberapa cerita yang telah kami bantu abadikan. Klik untuk melihat detail.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer scroll-reveal">
+                    <img src="https://placehold.co/600x800/F5F5F5/4D4D4D?text=Janji+Suci+Pernikahan" alt="Miniatur Janji Suci Pernikahan" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="gallery-title text-2xl font-bold text-white font-lora">Janji Suci Pernikahan</h3>
+                        <p class="gallery-desc text-white/80 mt-1">Detail gaun dan tatapan mata yang diabadikan.</p>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer scroll-reveal" style="transition-delay: 150ms;">
+                    <img src="https://placehold.co/600x800/F5F5F5/4D4D4D?text=Kado+Untuk+Orang+Tua" alt="Miniatur Kado Untuk Orang Tua" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="gallery-title text-2xl font-bold text-white font-lora">Kado Untuk Orang Tua</h3>
+                        <p class="gallery-desc text-white/80 mt-1">Menciptakan ulang momen pernikahan mereka 40 tahun lalu.</p>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer scroll-reveal" style="transition-delay: 300ms;">
+                    <img src="https://placehold.co/600x800/F5F5F5/4D4D4D?text=Momen+Wisuda" alt="Miniatur Momen Wisuda" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="gallery-title text-2xl font-bold text-white font-lora">Momen Wisuda Spesial</h3>
+                        <p class="gallery-desc text-white/80 mt-1">Sebuah hadiah pencapaian yang tak terlupakan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proses" class="py-20 bg-stone-50">
+        </section>
+
+    <section id="kontak" class="py-20 bg-white">
+        </section>
+
+    <footer class="bg-slate-800 text-white">
+        </footer>
+
+    <div id="lightbox" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-opacity duration-300">
+        <div id="lightbox-content" class="relative bg-white rounded-lg shadow-2xl max-w-3xl w-full transform scale-95 transition-transform duration-300">
+            <img id="lightbox-img" src="" alt="Detail Karya Ethnik Art" class="w-full h-auto max-h-[80vh] object-contain rounded-t-lg">
+            <div class="p-6">
+                <h3 id="lightbox-title" class="text-2xl font-bold font-lora text-stone-900"></h3>
+                <p id="lightbox-desc" class="mt-2 text-stone-600"></p>
+            </div>
+        </div>
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:text-stone-300">&times;</button>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // === 1. SCRIPT UNTUK HEADER STICKY ===
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/80', 'shadow-md', 'backdrop-blur-lg');
+                header.querySelector('a').classList.add('text-slate-800');
+            } else {
+                header.classList.remove('bg-white/80', 'shadow-md', 'backdrop-blur-lg');
+                header.querySelector('a').classList.remove('text-slate-800');
+            }
+        });
+
+        // === 2. SCRIPT UNTUK ANIMASI SAAT SCROLL ===
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Optional: unobserve after it's visible
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        revealElements.forEach(el => observer.observe(el));
+
+        // === 3. SCRIPT UNTUK GALERI LIGHTBOX ===
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                const title = item.querySelector('.gallery-title');
+                const desc = item.querySelector('.gallery-desc');
+
+                lightboxImg.src = img.src;
+                lightboxTitle.textContent = title.textContent;
+                lightboxDesc.textContent = desc.textContent;
+                
+                lightbox.classList.remove('hidden');
+                setTimeout(() => { // Delay for smooth transition
+                    lightbox.style.opacity = '1';
+                    lightboxContent.style.transform = 'scale(1)';
+                }, 10);
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.opacity = '0';
+            lightboxContent.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300); // Wait for transition to finish
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) { // Close only if clicking the overlay
+                closeLightbox();
+            }
+        });
+    });
+    </script>
+</body>
+</html>
